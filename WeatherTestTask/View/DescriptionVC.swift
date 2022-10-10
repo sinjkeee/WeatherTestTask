@@ -1,19 +1,17 @@
 //
-//  ViewController.swift
+//  DescriptionVC.swift
 //  WeatherTestTask
 //
-//  Created by Vladimir Sekerko on 09.10.2022.
+//  Created by Vladimir Sekerko on 10.10.2022.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class DescriptionVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-
-
 }
-
