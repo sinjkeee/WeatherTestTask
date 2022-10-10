@@ -14,9 +14,10 @@ class ListTableVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        networkWeatherManager.fetchWeather()
+        networkWeatherManager.fetchWeather { weather in
+            print(weather)
+        }
     }
-    
 
     // MARK: - Table view data source
 
