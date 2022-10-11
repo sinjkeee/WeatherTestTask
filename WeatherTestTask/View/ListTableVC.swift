@@ -9,13 +9,14 @@ import UIKit
 
 class ListTableVC: UITableViewController {
     
-    let networkWeatherManager = NetworkWeatherManager()
+//    let networkWeatherManager = NetworkWeatherManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        networkWeatherManager.fetchWeather { weather in
-            print(weather)
+        NetworkWeatherManager.shared.fetchWeather()
+        getCoordinateFrom(city: "минск") { coordinate, error in
+            print(coordinate!)
         }
     }
 

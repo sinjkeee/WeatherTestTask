@@ -17,6 +17,7 @@
 		2ACA400B28F42F7600B15369 /* NetworkWeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA400A28F42F7600B15369 /* NetworkWeatherManager.swift */; };
 		2ACA400D28F434F500B15369 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA400C28F434F500B15369 /* WeatherData.swift */; };
 		2ACA400F28F438A200B15369 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA400E28F438A200B15369 /* Weather.swift */; };
+		2ACA401128F5A4E100B15369 /* GetCitiesWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA401028F5A4E100B15369 /* GetCitiesWeather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		2ACA400A28F42F7600B15369 /* NetworkWeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWeatherManager.swift; sourceTree = "<group>"; };
 		2ACA400C28F434F500B15369 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		2ACA400E28F438A200B15369 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		2ACA401028F5A4E100B15369 /* GetCitiesWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCitiesWeather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +66,9 @@
 		2ACA3FEE28F3379E00B15369 /* WeatherTestTask */ = {
 			isa = PBXGroup;
 			children = (
-				2ACA400928F42E5A00B15369 /* Supporting files */,
-				2ACA400828F42E5200B15369 /* View */,
 				2ACA400728F42E4A00B15369 /* Model */,
+				2ACA400828F42E5200B15369 /* View */,
+				2ACA400928F42E5A00B15369 /* Supporting files */,
 			);
 			path = WeatherTestTask;
 			sourceTree = "<group>";
@@ -77,6 +79,7 @@
 				2ACA400A28F42F7600B15369 /* NetworkWeatherManager.swift */,
 				2ACA400C28F434F500B15369 /* WeatherData.swift */,
 				2ACA400E28F438A200B15369 /* Weather.swift */,
+				2ACA401028F5A4E100B15369 /* GetCitiesWeather.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			files = (
 				2ACA400428F421CD00B15369 /* ListTableVC.swift in Sources */,
 				2ACA3FF028F3379E00B15369 /* AppDelegate.swift in Sources */,
+				2ACA401128F5A4E100B15369 /* GetCitiesWeather.swift in Sources */,
 				2ACA400B28F42F7600B15369 /* NetworkWeatherManager.swift in Sources */,
 				2ACA3FF228F3379E00B15369 /* SceneDelegate.swift in Sources */,
 				2ACA400D28F434F500B15369 /* WeatherData.swift in Sources */,

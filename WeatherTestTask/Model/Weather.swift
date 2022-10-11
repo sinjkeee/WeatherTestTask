@@ -14,7 +14,7 @@ struct Weather {
     var url: String
     var condition: String
     var presureMm: Int
-    var windSpeed: Int
+    var windSpeed: Double
     var tempMin: Int = 0
     var tempMax: Int = 0
     
@@ -44,18 +44,23 @@ struct Weather {
     }
     
     init?(weatherData: WeatherData) {
-        temperature = weatherData.fact.temp
-        conditionCode = weatherData.fact.icon
-        url = weatherData.info.url
-        condition = weatherData.fact.condition
-        presureMm = weatherData.fact.pressureMm
-        windSpeed = weatherData.fact.windSpeed
         
-        guard let min = weatherData.forecasts.first?.parts.day.tempMin,
-              let max = weatherData.forecasts.first?.parts.day.tempMax
-        else { return }
+        guard let temp = weatherData.fact?.temp,
+              let conditionCode = weatherData.fact?.icon,
+              let url = weatherData.info?.url,
+              let condition = weatherData.fact?.condition,
+              let presureMm = weatherData.fact?.pressureMm,
+              let windSpeed = weatherData.fact?.windSpeed,
+              let min = weatherData.forecasts?.first?.parts?.day?.tempMin,
+              let max = weatherData.forecasts?.first?.parts?.day?.tempMax else { return nil }
         
-        tempMin = min
-        tempMax = max
+        self.temperature = temp
+        self.conditionCode = conditionCode
+        self.url = url
+        self.condition = condition
+        self.presureMm = presureMm
+        self.windSpeed = windSpeed
+        self.tempMin = min
+        self.tempMax = max
     }
 }
