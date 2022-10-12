@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="28u-nn-YY5">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="28u-nn-YY5" customClass="ListCell" customModule="WeatherTestTask" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="28u-nn-YY5" id="bdO-Qf-1j2">
@@ -25,13 +25,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bz-tl-lrp">
-                                            <rect key="frame" x="35.999999999999993" y="11.666666666666666" width="77.333333333333314" height="20.333333333333336"/>
+                                            <rect key="frame" x="27.999999999999993" y="11.666666666666666" width="77.333333333333314" height="20.333333333333336"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P0s-3b-7ut">
-                                            <rect key="frame" x="329.33333333333331" y="11.666666666666666" width="44.666666666666686" height="20.333333333333336"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="P0s-3b-7ut">
+                                            <rect key="frame" x="323.33333333333331" y="11.666666666666666" width="50.666666666666686" height="20.333333333333336"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIM-iB-rv0">
                                                     <rect key="frame" x="0.0" y="0.0" width="25.333333333333332" height="20.333333333333332"/>
@@ -40,7 +40,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAb-x5-ZN1">
-                                                    <rect key="frame" x="25.333333333333371" y="0.0" width="19.333333333333329" height="20.333333333333332"/>
+                                                    <rect key="frame" x="31.333333333333371" y="0.0" width="19.333333333333329" height="20.333333333333332"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -48,7 +48,7 @@
                                             </subviews>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Статус" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQf-pP-bC4">
-                                            <rect key="frame" x="275" y="13.333333333333336" width="46.333333333333314" height="17"/>
+                                            <rect key="frame" x="261" y="13.333333333333336" width="46.333333333333314" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" systemColor="systemGray2Color"/>
                                             <nil key="highlightedColor"/>
@@ -58,12 +58,17 @@
                                         <constraint firstAttribute="trailing" secondItem="P0s-3b-7ut" secondAttribute="trailing" constant="16" id="248-HI-0XI"/>
                                         <constraint firstItem="bQf-pP-bC4" firstAttribute="centerY" secondItem="bdO-Qf-1j2" secondAttribute="centerY" id="3D3-CT-BoM"/>
                                         <constraint firstItem="P0s-3b-7ut" firstAttribute="centerY" secondItem="bdO-Qf-1j2" secondAttribute="centerY" id="RDl-BK-dKf"/>
-                                        <constraint firstItem="P0s-3b-7ut" firstAttribute="leading" secondItem="bQf-pP-bC4" secondAttribute="trailing" constant="8" id="TIX-Ig-liB"/>
+                                        <constraint firstItem="P0s-3b-7ut" firstAttribute="leading" secondItem="bQf-pP-bC4" secondAttribute="trailing" constant="16" id="TIX-Ig-liB"/>
                                         <constraint firstItem="0bz-tl-lrp" firstAttribute="centerY" secondItem="bdO-Qf-1j2" secondAttribute="centerY" id="mei-53-M2j"/>
-                                        <constraint firstItem="0bz-tl-lrp" firstAttribute="leading" secondItem="bdO-Qf-1j2" secondAttribute="leadingMargin" constant="16" id="uAr-2H-pWw"/>
+                                        <constraint firstItem="0bz-tl-lrp" firstAttribute="leading" secondItem="bdO-Qf-1j2" secondAttribute="leadingMargin" constant="8" id="uAr-2H-pWw"/>
                                         <constraint firstItem="bQf-pP-bC4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0bz-tl-lrp" secondAttribute="trailing" constant="8" symbolic="YES" id="ymk-Qm-ttU"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="conditionCityLabel" destination="bQf-pP-bC4" id="JJf-jh-aLb"/>
+                                    <outlet property="nameCityLabel" destination="0bz-tl-lrp" id="Mh7-aP-Fxe"/>
+                                    <outlet property="tempCityLabel" destination="QIM-iB-rv0" id="fr2-gF-gYx"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

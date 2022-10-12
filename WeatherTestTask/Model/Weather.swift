@@ -8,13 +8,16 @@
 import Foundation
 
 struct Weather {
-    let name: String = "Название"
-    var temperature: Int
-    var conditionCode: String
-    var url: String
-    var condition: String
-    var presureMm: Int
-    var windSpeed: Double
+    var name: String = "Название"
+    var temperature: Int = 0
+    var temperatureString: String {
+        return String(temperature)
+    }
+    var conditionCode: String = ""
+    var url: String = ""
+    var condition: String = ""
+    var presureMm: Int = 0
+    var windSpeed: Double = 0.0
     var tempMin: Int = 0
     var tempMax: Int = 0
     
@@ -63,4 +66,6 @@ struct Weather {
         self.tempMin = min
         self.tempMax = max
     }
+    
+    init() { }
 }
