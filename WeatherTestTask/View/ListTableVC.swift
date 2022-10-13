@@ -14,7 +14,7 @@ class ListTableVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         addCitiesWeather()
     }
     
@@ -33,13 +33,13 @@ class ListTableVC: UITableViewController {
             }
         }
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return citiesArray.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let listCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListCell else { return UITableViewCell() }
         
@@ -54,6 +54,5 @@ class ListTableVC: UITableViewController {
         let cityWeather = citiesArray[indexPath.row]
         detailViewController.weatherModel = cityWeather
         present(detailViewController, animated: true)
-        print(cityWeather)
     }
 }
