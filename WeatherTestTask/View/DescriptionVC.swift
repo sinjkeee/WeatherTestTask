@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SwiftSVG
+import SVGKit
 
 class DescriptionVC: UIViewController {
     
@@ -14,6 +14,8 @@ class DescriptionVC: UIViewController {
     @IBOutlet weak var imageWeatherView: UIView!
     @IBOutlet weak var conditionLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
+    
+    @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var pressureLabel: UILabel!
     @IBOutlet weak var windSpeedLabel: UILabel!
@@ -42,11 +44,14 @@ class DescriptionVC: UIViewController {
         let urlString = "https://yastatic.net/weather/i/icons/funky/dark/\(String(describing: weatherModel.conditionCode)).svg"
         guard let url = URL(string: urlString) else { return }
         
-        let weatherImage = UIView(SVGURL: url) { [weak self] (image) in
-            guard let self = self else { return }
-            image.resizeToFit(self.imageWeatherView.bounds)
+        DispatchQueue.global(qos: .userInitiated).async {
+            if let data = try? Data(contentsOf: url) {
+                let recievedImage: SVGKImage = SVGKImage(data: data)
+                let image = recievedImage.uiImage
+                DispatchQueue.main.async {
+                    self.imageView.image = image
+                }
+            }
         }
-        
-        imageWeatherView.addSubview(weatherImage)
     }
 }
