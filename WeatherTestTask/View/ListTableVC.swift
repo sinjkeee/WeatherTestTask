@@ -48,4 +48,12 @@ class ListTableVC: UITableViewController {
         
         return listCell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let detailViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DescriptionVC") as? DescriptionVC else { return }
+        let cityWeather = citiesArray[indexPath.row]
+        detailViewController.weatherModel = cityWeather
+        present(detailViewController, animated: true)
+        print(cityWeather)
+    }
 }
