@@ -19,6 +19,7 @@
 		2ACA400F28F438A200B15369 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA400E28F438A200B15369 /* Weather.swift */; };
 		2ACA401128F5A4E100B15369 /* GetCitiesWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA401028F5A4E100B15369 /* GetCitiesWeather.swift */; };
 		2ACA401328F7268200B15369 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA401228F7268200B15369 /* ListCell.swift */; };
+		2ACA40182900609C00B15369 /* ListTableVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA40172900609C00B15369 /* ListTableVC+Extension.swift */; };
 		5432E76011BE4B18EB5FDC9C /* Pods_WeatherTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D8AD34FEAD22B801AD32BA /* Pods_WeatherTestTask.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		2ACA400E28F438A200B15369 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		2ACA401028F5A4E100B15369 /* GetCitiesWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCitiesWeather.swift; sourceTree = "<group>"; };
 		2ACA401228F7268200B15369 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		2ACA40172900609C00B15369 /* ListTableVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListTableVC+Extension.swift"; sourceTree = "<group>"; };
 		F7D8AD34FEAD22B801AD32BA /* Pods_WeatherTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 				2ACA400C28F434F500B15369 /* WeatherData.swift */,
 				2ACA400E28F438A200B15369 /* Weather.swift */,
 				2ACA401028F5A4E100B15369 /* GetCitiesWeather.swift */,
+				2ACA40172900609C00B15369 /* ListTableVC+Extension.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,7 +133,6 @@
 				0D39B03D0F63DAA8E2A6CEFC /* Pods-WeatherTestTask.debug.xcconfig */,
 				0175484900E5A6F58D90ECB1 /* Pods-WeatherTestTask.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -262,6 +264,7 @@
 				2ACA401128F5A4E100B15369 /* GetCitiesWeather.swift in Sources */,
 				2ACA400B28F42F7600B15369 /* NetworkWeatherManager.swift in Sources */,
 				2ACA3FF228F3379E00B15369 /* SceneDelegate.swift in Sources */,
+				2ACA40182900609C00B15369 /* ListTableVC+Extension.swift in Sources */,
 				2ACA400D28F434F500B15369 /* WeatherData.swift in Sources */,
 				2ACA401328F7268200B15369 /* ListCell.swift in Sources */,
 				2ACA400628F42DC500B15369 /* DescriptionVC.swift in Sources */,

@@ -34,6 +34,14 @@ class ListTableVC: UITableViewController {
         }
     }
     
+    @IBAction func addNewCity(_ sender: UIBarButtonItem) {
+        showAlert(name: "Город", placeholder: "Введите название города") { city in
+            self.nameCitiesArray.append(city)
+            self.citiesArray.append(Weather())
+            self.addCitiesWeather()
+        }
+    }
+    
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,9 +58,22 @@ class ListTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         guard let detailViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DescriptionVC") as? DescriptionVC else { return }
         let cityWeather = citiesArray[indexPath.row]
         detailViewController.weatherModel = cityWeather
         present(detailViewController, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Удалить") { _, _, completionHandler in
+            
+            let editingRow = self.nameCitiesArray[indexPath.row]
+            if let index = self.nameCitiesArray.firstIndex(of: editingRow) {
+                self.citiesArray.remove(at: index)
+            }
+            tableView.reloadData()
+        }
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 }

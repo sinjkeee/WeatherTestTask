@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zey-hV-dbV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JZR-9Y-kaN">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List TableVC-->
+        <!--Weather test task-->
         <scene sceneID="VB9-zS-026">
             <objects>
                 <tableViewController storyboardIdentifier="ListTableVC" id="zey-hV-dbV" customClass="ListTableVC" customModule="WeatherTestTask" customModuleProvider="target" sceneMemberID="viewController">
@@ -76,10 +76,17 @@
                             <outlet property="delegate" destination="zey-hV-dbV" id="TU5-r9-BmB"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Weather test task" id="x46-Oc-Njq">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jMJ-Za-1qx">
+                            <connections>
+                                <action selector="addNewCity:" destination="zey-hV-dbV" id="WPH-RV-MeV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3oG-qr-EHy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33.846153846153847" y="-36.255924170616112"/>
+            <point key="canvasLocation" x="963.07692307692309" y="-36.255924170616112"/>
         </scene>
         <!--DescriptionVC-->
         <scene sceneID="RzN-80-9LO">
@@ -293,7 +300,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnb-WN-PYf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="772" y="-36"/>
+            <point key="canvasLocation" x="1700" y="-36.255924170616112"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="et8-xh-DTu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JZR-9Y-kaN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="K4g-JZ-nCI">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zey-hV-dbV" kind="relationship" relationship="rootViewController" id="rON-GN-FEg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R5h-tm-MLG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33.846153846153847" y="-36.255924170616112"/>
         </scene>
     </scenes>
     <resources>
